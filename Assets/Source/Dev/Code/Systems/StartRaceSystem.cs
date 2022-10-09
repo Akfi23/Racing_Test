@@ -38,12 +38,12 @@ public class StartRaceSystem : GameSystemWithScreen<MenuScreen>
 
     private async void LoadLevelAsync(int levelNumber)
     {
-        await StartLoadingLevel(levelNumber);
+        AdsManager.Instance.ShowInterstitial("Start Race");
+        await StartLoadingLevel(levelNumber).ToCoroutine();
     }
 
     private async UniTask StartLoadingLevel(int levelNumber)
     {
-        //await UniTask
         _loadingScreen.LoadingImage.transform.rotation = Quaternion.Euler(Vector3.zero);
 
         _loadingScreen.BackgroundImage.DOFade(1,0.15f).SetEase(Ease.Linear)
