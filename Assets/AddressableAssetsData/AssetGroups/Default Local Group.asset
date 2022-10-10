@@ -21,6 +21,66 @@ MonoBehaviour:
     m_Address: Assets/3DParty/BootstrapLucky/Source/Game Config.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: dc97eb93b20b040c69941e308d51f721
+    m_Address: ColorConfigs/BlueConfig
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 463a2befe56414353a92883093e9a1e4
+    m_Address: ColorConfigs/RedConfig
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7faad721c356d42f7afcd1c09111a87d
+    m_Address: ColorConfigs/GreenConfig
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3addc74d49b084fd29fa9a8fad0c9889
+    m_Address: ColorConfigs/YellowConfig
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a53e695536b1d449d883115d9fc6b7cc
+    m_Address: Assets/Source/Art/Materials/Color_Blue.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bd63a1933e49e40e5bfabb3b7903a3b5
+    m_Address: Assets/Source/Art/Materials/Color_Green.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 173759f5e8b9a4d898c518cec1b1fa62
+    m_Address: Assets/Source/Art/Materials/Color_Red.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d7d202c7cbe894be4b63df066f45e203
+    m_Address: Assets/Source/Art/Materials/Color_Yellow.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 74b31680788c745dbbf579ac33ef417f
+    m_Address: Assets/Source/Dev/Prefabs/LevelSelectorButton.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 95ed3ceec61ca4db9a0c82d63d99a93b
+    m_Address: Assets/Source/Dev/Prefabs/ColorButton.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4551f58f76fd6414487ecb42f3d77627
+    m_Address: LevelConfigs/Level 1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1be1041b0ffb74334b4ab0267d38a52c
+    m_Address: LevelConfigs/Level 2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9817953f04dee4addb2c9adcabeb0f49
+    m_Address: Assets/CarContainer.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2403c05aafcdf46eb9de4c649958a642
+    m_Address: Assets/Scenes/Level1.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c27e11602b1264457b7b032c982566d7
+    m_Address: Assets/Scenes/Level2.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: a59a0b2dce42048b8975a0fbd216fc4e, type: 2}
   m_SchemaSet:
