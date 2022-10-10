@@ -17,15 +17,20 @@ public sealed class GameConfig : ScriptableObject
 
     [Header("Player Stats")]
     [HorizontalLine(color: EColor.Blue)]
-    [SerializeField] private float _baseHealth;
+    [SerializeField] private int _baseHealth;
 
     [Header("Render Presets")]
-    [HorizontalLine(color: EColor.Blue)]
-    [SerializeField] private RenderPipelineAsset[] _qualityPresets; 
+    [HorizontalLine(color: EColor.Yellow)]
+    [SerializeField] private RenderPipelineAsset[] _qualityPresets;
+
+    [Header("Render Presets")]
+    [HorizontalLine(color: EColor.Orange)]
+    [SerializeField] private AssetReferenceContainer _referenceContainer;
 
     public float BaseForce => _baseForce;
     public float BrakeForce => _brakeForce;
     public float MaxSteerAngle => _maxSteerAngle;
-    public float BaseHealth => _baseHealth;
+    public int BaseHealth => _baseHealth;
     public RenderPipelineAsset[] QualityPresets => _qualityPresets;
+    public AssetReferenceContainer ReferenceContainer => _referenceContainer;
 }

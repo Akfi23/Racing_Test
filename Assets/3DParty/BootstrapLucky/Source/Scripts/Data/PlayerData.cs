@@ -13,7 +13,8 @@ public class PlayerData
 {
     public int RenderSettingsIndex=1;
     public int Money = 500;
-    public int Health;
     public string ColorName = "Yellow";
     public string PlayerName = "Player";
+
+    public Dictionary<UpgradeType, UpgradeData> UpgradeDatas = new Dictionary<UpgradeType, UpgradeData>();
 }

@@ -9,5 +9,6 @@ public class InitGameSystem : GameSystemWithScreen<GameScreen>
         cameraController.SetRaceCameraActive();
         game.Player.RB.isKinematic = false;
         screen.NameText.text = player.PlayerName;
+        screen.RestartButton.onClick.AddListener(() => Bootstrap.Instance.GameRestart(0));
     }
 }

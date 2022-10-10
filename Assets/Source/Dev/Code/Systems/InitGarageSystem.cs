@@ -6,7 +6,13 @@ public class InitGarageSystem : GameSystemWithScreen<ShopScreen>
 {
     public override void OnInit()
     {
-        screen.MoneyText.text = player.Money.ToString();
-        screen.HealthText.text = (config.BaseHealth + player.Health).ToString();
+        screen.UpdateMoneyInfo(player.Money);
+
+        if (player.UpgradeDatas.Count > 0)
+            game.Health = config.BaseHealth + player.UpgradeDatas[UpgradeType.Health].BonusValue;
+        else
+            game.Health = config.BaseHealth;
+
+        screen.UpdateHealthInfo(game.Health);
     }
 }

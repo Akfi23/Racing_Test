@@ -11,6 +11,7 @@ using System.Collections.Generic;
 public class GameData
 {
     public CarContainerComponent Player;
+    public int Health;
     public int GearShiftNumber=1;
     public LevelConfig CurrentLevelConfig;
     public bool IsWin;

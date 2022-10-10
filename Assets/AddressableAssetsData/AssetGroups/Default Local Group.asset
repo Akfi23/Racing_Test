@@ -81,6 +81,22 @@ MonoBehaviour:
     m_Address: Assets/Scenes/Level2.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: db43154ed23a14b50b50090b99a37373
+    m_Address: Assets/UpgradeButton.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 02f3989f977fd495db82216dcbae1ce8
+    m_Address: Assets/Source/ResourcesOld/UpgradeConfigs/HealthUpgrade.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2f20c1cd2655741b9b3323338e7ec1be
+    m_Address: Assets/Source/ResourcesOld/UpgradeConfigs/SpeedUpgrade.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 421b7fdbdc0904f67965a2d944184ea0
+    m_Address: Assets/Source/ResourcesOld/UpgradeConfigs/ArmorUpgrade.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: a59a0b2dce42048b8975a0fbd216fc4e, type: 2}
   m_SchemaSet:

@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7a9befbf55742689da21cd010609ca, type: 3}
+  m_Name: Asset Reference Container
+  m_EditorClassIdentifier: 
+  ColorButtonRef:
+    m_AssetGUID: 95ed3ceec61ca4db9a0c82d63d99a93b
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  LevelButtonRef:
+    m_AssetGUID: 74b31680788c745dbbf579ac33ef417f
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  UpgradeButtonRef:
+    m_AssetGUID: db43154ed23a14b50b50090b99a37373
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  ColorConfigsRef:
+  - m_AssetGUID: dc97eb93b20b040c69941e308d51f721
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 463a2befe56414353a92883093e9a1e4
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 7faad721c356d42f7afcd1c09111a87d
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 3addc74d49b084fd29fa9a8fad0c9889
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  LevelConfigsRef:
+  - m_AssetGUID: 4551f58f76fd6414487ecb42f3d77627
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 1be1041b0ffb74334b4ab0267d38a52c
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  UpgradeConfigRef:
+  - m_AssetGUID: 02f3989f977fd495db82216dcbae1ce8
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 2f20c1cd2655741b9b3323338e7ec1be
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: 421b7fdbdc0904f67965a2d944184ea0
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  ScenesRef:
+  - m_AssetGUID: 2403c05aafcdf46eb9de4c649958a642
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  - m_AssetGUID: c27e11602b1264457b7b032c982566d7
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  CarRef:
+    m_AssetGUID: 9817953f04dee4addb2c9adcabeb0f49
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0

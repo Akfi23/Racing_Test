@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 512
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 47
+      m_TextureCompression: 1
+      m_CompressionQuality: 100
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: f4268d9db1c2b4662a75c5ec35f9b852, type: 3}
+    - {fileID: 2800000, guid: 3c211ed28a1254ad5be923faa2874f0e, type: 3}
+    - {fileID: 2800000, guid: 9876fcfabd3b2425687da38e45dedbc2, type: 3}
+    - {fileID: 2800000, guid: 82813c074e2854877b1382f0e987511b, type: 3}
+    - {fileID: 2800000, guid: 376de8be156ba41c5a1fa0f32c7c7670, type: 3}
+    - {fileID: 2800000, guid: 4b00db671a20143a8be8c3b5301d6a23, type: 3}
+    - {fileID: 2800000, guid: 97af439d5b4004d96b2dadfe95b1b414, type: 3}
+    - {fileID: 2800000, guid: e6eea4f7cbb9f46f79c0fe06180fa5b3, type: 3}
+    - {fileID: 2800000, guid: 96274b6f4982041558dfdc5471747076, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 3c211ed28a1254ad5be923faa2874f0e, type: 3}
+  - {fileID: 21300000, guid: 82813c074e2854877b1382f0e987511b, type: 3}
+  - {fileID: 21300000, guid: 4b00db671a20143a8be8c3b5301d6a23, type: 3}
+  - {fileID: 21300000, guid: e6eea4f7cbb9f46f79c0fe06180fa5b3, type: 3}
+  - {fileID: 21300000, guid: 9876fcfabd3b2425687da38e45dedbc2, type: 3}
+  - {fileID: 21300000, guid: 97af439d5b4004d96b2dadfe95b1b414, type: 3}
+  - {fileID: 21300000, guid: f4268d9db1c2b4662a75c5ec35f9b852, type: 3}
+  - {fileID: 21300000, guid: 376de8be156ba41c5a1fa0f32c7c7670, type: 3}
+  - {fileID: 21300000, guid: 96274b6f4982041558dfdc5471747076, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Loading_Rotate_White
+  - Icon_ShopIcon_Gold0
+  - Icon_PictoIcon_Resume
+  - Frame_ItemFrame01_Color_Green
+  - Icon_StatsIcon_Hp01
+  - Frame_ListFrame02
+  - Play_Skill_0
+  - Icon_Shop
+  - Background_06
+  m_RenderDataMap: {}
+  m_Tag: UI
+  m_IsVariant: 0

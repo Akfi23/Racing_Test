@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
@@ -10,10 +11,6 @@ using UnityEngine.SceneManagement;
 
 public class StartRaceSystem : GameSystemWithScreen<MenuScreen>
 {
-    [SerializeField] private AssetReference _buttonPrefab;
-    [SerializeField] private AssetReference[] _levelConfigAssets;
-    [SerializeField] private AssetReference[] _scenes;
-
     private LoadingScreen _loadingScreen;
 
     public async override void OnInit()
@@ -21,7 +18,7 @@ public class StartRaceSystem : GameSystemWithScreen<MenuScreen>
         _loadingScreen = UIManager.GetUIScreen<LoadingScreen>();
         screen.StartRaceButton.onClick.AddListener(ToggleLevelWindow);
 
-        for (int i = 0; i < _levelConfigAssets.Length; i++)
+        for (int i = 0; i < config.ReferenceContainer.LevelConfigsRef.Length; i++)
         {
             await InitLevelConfigs(i);
         }
@@ -29,7 +26,7 @@ public class StartRaceSystem : GameSystemWithScreen<MenuScreen>
 
     private async UniTask InitLevelConfigs(int configIndex)
     {
-        AsyncOperationHandle<LevelConfig> levelHandle = _levelConfigAssets[configIndex].LoadAssetAsync<LevelConfig>();
+        AsyncOperationHandle<LevelConfig> levelHandle = config.ReferenceContainer.LevelConfigsRef[configIndex].LoadAssetAsync<LevelConfig>();
         await levelHandle.ToUniTask();
 
         if (levelHandle.Status == AsyncOperationStatus.Succeeded)
@@ -42,7 +39,7 @@ public class StartRaceSystem : GameSystemWithScreen<MenuScreen>
 
     private async UniTask InitLevelButton(LevelConfig config)
     {
-        var button = await _buttonPrefab.InstantiateAsync(screen.LevelSelectorWindow).ToUniTask();
+        var button = await this.config.ReferenceContainer.LevelButtonRef.InstantiateAsync(screen.LevelSelectorWindow).ToUniTask();
         button.TryGetComponent(out LevelButtonComponent levelButton);
         levelButton.InitButton(config.LevelNumber);
         levelButton.LevelButton.OnClickAsAsyncEnumerable().Subscribe(a => LoadLevelAsync(config.LevelNumber));
@@ -64,7 +61,9 @@ public class StartRaceSystem : GameSystemWithScreen<MenuScreen>
         _loadingScreen.LoadingImage.transform.rotation = Quaternion.Euler(Vector3.zero);
 
         _loadingScreen.BackgroundImage.DOFade(1,0.15f).SetEase(Ease.Linear)
-            .OnComplete(async ()=> await _scenes[levelNumber-1].LoadSceneAsync(LoadSceneMode.Additive).ToUniTask());
+            /*.OnComplete(async ()=> await config.ReferenceContainer.ScenesRef[levelNumber-1].LoadSceneAsync(LoadSceneMode.Additive).ToUniTask())*/;
+
+        await config.ReferenceContainer.ScenesRef[levelNumber - 1].LoadSceneAsync(LoadSceneMode.Additive).ToUniTask();
 
         _loadingScreen.LoadingImage.transform.DORotate(Vector3.up * 90f, 0.3f).SetLoops(5, LoopType.Incremental).SetEase(Ease.Linear).
             OnComplete(() => _loadingScreen.BackgroundImage.DOFade(0, 0.3f));
