@@ -9,8 +9,10 @@ public class GameScreen : UIScreen
     [SerializeField] private TMP_Text _nameText;
     [SerializeField] private Button _restartButton;
     [SerializeField] private TMP_Text _hpText;
+    [SerializeField] private TMP_Text _speedText;
 
     public TMP_Text NameText => _nameText;
     public Button RestartButton => _restartButton;
     public TMP_Text HPText => _hpText;
+    public TMP_Text SpeedText => _speedText;
 }
