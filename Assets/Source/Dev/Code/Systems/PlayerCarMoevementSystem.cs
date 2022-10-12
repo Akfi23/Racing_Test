@@ -35,8 +35,8 @@ public class PlayerCarMoevementSystem : GameSystem
 
     private void TryGetInput()
     {
-        _horizontalValue = Input.GetAxis("Horizontal");
-        _verticalValue = Input.GetAxis("Vertical");
+        _horizontalValue = Input.GetAxis(horizontalAxis);
+        _verticalValue = Input.GetAxis(verticalAxis);
 
         _isHandBrake = Input.GetKey(KeyCode.Space);
     }

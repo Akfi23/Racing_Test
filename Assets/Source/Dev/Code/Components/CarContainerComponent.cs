@@ -5,14 +5,14 @@ using UnityEngine;
 public class CarContainerComponent : MonoBehaviour
 {
     [Header("Wheels Stuff")]
-    [SerializeField] private Transform[] _wheelTransforms;
-    [SerializeField] private WheelCollider[] _wheelColliders;
+    [SerializeField] protected Transform[] _wheelTransforms;
+    [SerializeField] protected WheelCollider[] _wheelColliders;
 
     [Header("Car Body")]
-    [SerializeField] private MeshRenderer bodyRenderer;
-    [SerializeField] private Rigidbody _rb;
+    [SerializeField] protected MeshRenderer bodyRenderer;
+    [SerializeField] protected Rigidbody _rb;
 
-    private CarOwner _owner;
+    protected CarOwner _owner;
 
     public Transform[] WheelTransforms => _wheelTransforms;
     public WheelCollider[] WheelColliders => _wheelColliders;

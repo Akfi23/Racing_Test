@@ -10,9 +10,13 @@ using System.Collections.Generic;
 [Serializable]
 public class GameData
 {
-    public CarContainerComponent Player;
+    public PlayerCarComponent Player;
     public int Health;
     public int GearShiftNumber=1;
+
     public LevelConfig CurrentLevelConfig;
     public bool IsWin;
+
+    public Dictionary<string, ColorConfig>ColorConfigs = new Dictionary<string, ColorConfig>();
+    public List<OpponentCarComponent> OpponentsCars = new List<OpponentCarComponent>();
 }

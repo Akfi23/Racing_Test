@@ -13,7 +13,7 @@ public class CarHPSystem : GameSystemWithScreen<GameScreen>
 
     private void CheckPower(float power)
     {
-        int damage = Mathf.RoundToInt(power) / 10;
+        int damage = Mathf.RoundToInt(power) / 50;
 
         if (game.Health - damage > 0)
             game.Health -= damage;

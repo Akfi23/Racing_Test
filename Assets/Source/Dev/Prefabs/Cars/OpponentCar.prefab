@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3600118009587517894}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8406266512009791187
 MeshFilter:
@@ -493,9 +493,9 @@ GameObject:
   - component: {fileID: 4408351441003100178}
   - component: {fileID: 4408351441003100176}
   - component: {fileID: 4408351441003100177}
-  - component: {fileID: 4408351441003100183}
+  - component: {fileID: 3359335011238002534}
   m_Layer: 0
-  m_Name: CarContainer
+  m_Name: OpponentCar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -547,7 +547,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9, y: 1.3257651, z: 4.8785944}
   m_Center: {x: 0, y: 0.85, z: 0.010608673}
---- !u!114 &4408351441003100183
+--- !u!114 &3359335011238002534
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -556,21 +556,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 4408351441003100189}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 893ec9c136c104faf8a06aa9448c856f, type: 3}
+  m_Script: {fileID: 11500000, guid: ebd742f9786bb4b47b5aa483fd3d9f4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _wheelTransforms:
   - {fileID: 4092595012249483683}
   - {fileID: 827431937591364497}
-  - {fileID: 6034281088347004262}
   - {fileID: 4862254398933287057}
+  - {fileID: 6034281088347004262}
   _wheelColliders:
   - {fileID: 4103145694373507914}
   - {fileID: 4103145694797200143}
-  - {fileID: 4103145695185223636}
   - {fileID: 4103145696262306503}
+  - {fileID: 4103145695185223636}
   bodyRenderer: {fileID: 6210647907760747519}
   _rb: {fileID: 4408351441003100176}
+  Forward: 1
+  Turn: 0
+  FrontOffsetSensor: 2.6
+  SideOffsetSensor: 1
+  EndShiftSensor: 8
+  LenghtSensor: 10
 --- !u!1 &5062435679585228750
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,8 +607,8 @@ Transform:
   m_Children:
   - {fileID: 4092595012249483683}
   - {fileID: 827431937591364497}
-  - {fileID: 6034281088347004262}
   - {fileID: 4862254398933287057}
+  - {fileID: 6034281088347004262}
   m_Father: {fileID: 2999048818329663630}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -668,7 +674,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a53e695536b1d449d883115d9fc6b7cc, type: 2}
+  - {fileID: 2100000, guid: 173759f5e8b9a4d898c518cec1b1fa62, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -721,7 +727,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3600118009587517894}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3750618089612447101
 MeshFilter:

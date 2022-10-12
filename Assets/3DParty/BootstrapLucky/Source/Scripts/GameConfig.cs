@@ -15,6 +15,11 @@ public sealed class GameConfig : ScriptableObject
     [SerializeField] private float _brakeForce;
     [SerializeField] private float _maxSteerAngle;
 
+    [Header("Opponent Stuff")]
+    [HorizontalLine(color: EColor.Green)]
+    [SerializeField] private float _acceleration;
+    [SerializeField] private float _opponentEngineForce;
+
     [Header("Player Stats")]
     [HorizontalLine(color: EColor.Blue)]
     [SerializeField] private int _baseHealth;
@@ -30,6 +35,8 @@ public sealed class GameConfig : ScriptableObject
     public float BaseForce => _baseForce;
     public float BrakeForce => _brakeForce;
     public float MaxSteerAngle => _maxSteerAngle;
+    public float Acceleration => _acceleration;
+    public float OpponentForce => _opponentEngineForce;
     public int BaseHealth => _baseHealth;
     public RenderPipelineAsset[] QualityPresets => _qualityPresets;
     public AssetReferenceContainer ReferenceContainer => _referenceContainer;

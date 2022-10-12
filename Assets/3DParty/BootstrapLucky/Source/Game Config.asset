@@ -15,6 +15,8 @@ MonoBehaviour:
   _baseForce: 300
   _brakeForce: 150000
   _maxSteerAngle: 30
+  _acceleration: 0.2
+  _opponentEngineForce: 300
   _baseHealth: 100
   _qualityPresets:
   - {fileID: 11400000, guid: d0e2fc18fe036412f8223b3b3d9ad574, type: 2}

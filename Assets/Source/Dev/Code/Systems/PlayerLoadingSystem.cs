@@ -6,7 +6,7 @@ public class PlayerLoadingSystem : GameSystem
 {
     public override void OnInit()
     {
-        game.Player = FindObjectOfType<CarContainerComponent>();
+        game.Player = FindObjectOfType<PlayerCarComponent>();
 
         game.Player.SetOwner(CarOwner.Player);
     }

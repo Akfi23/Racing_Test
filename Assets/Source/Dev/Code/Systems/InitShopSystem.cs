@@ -9,8 +9,6 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class InitShopSystem : GameSystemWithScreen<ShopScreen> // Rename to ColorSelectorSystem !!!
 {
-    private Dictionary<string, ColorConfig> _colorConfigs = new Dictionary<string, ColorConfig>();
-
     public async override void OnInit()
     {
         screen.ColorShopButton.onClick.AddListener(ToggleShopWindow);
@@ -38,14 +36,14 @@ public class InitShopSystem : GameSystemWithScreen<ShopScreen> // Rename to Colo
         if (handle.Status == AsyncOperationStatus.Succeeded)
         {
             ColorConfig config = handle.Result;
-            _colorConfigs.Add(config.Name, config);
+            game.ColorConfigs.Add(config.Name, config);
             Addressables.Release(handle);
         }
     }
 
     private async UniTask LoadButtonPrefab()
     {
-        foreach (var config in _colorConfigs)
+        foreach (var config in game.ColorConfigs)
         {
             var button = await this.config.ReferenceContainer.ColorButtonRef.InstantiateAsync(screen.ColorContentParent).ToUniTask();
             button.TryGetComponent(out ColorButtonComponent colorButton);
@@ -62,8 +60,8 @@ public class InitShopSystem : GameSystemWithScreen<ShopScreen> // Rename to Colo
 
     private void SetColorBySave(string name)
     {
-        var material = _colorConfigs[name].ColorMaterial;
-        var color = _colorConfigs[name].Name;
+        var material = game.ColorConfigs[name].ColorMaterial;
+        var color = game.ColorConfigs[name].Name;
 
         SetCarColor(material, color);
     }

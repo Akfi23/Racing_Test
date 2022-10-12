@@ -42,7 +42,7 @@ public class StartRaceSystem : GameSystemWithScreen<MenuScreen>
         var button = await this.config.ReferenceContainer.LevelButtonRef.InstantiateAsync(screen.LevelSelectorWindow).ToUniTask();
         button.TryGetComponent(out LevelButtonComponent levelButton);
         levelButton.InitButton(config.LevelNumber);
-        levelButton.LevelButton.OnClickAsAsyncEnumerable().Subscribe(a => LoadLevelAsync(config.LevelNumber));
+        levelButton.LevelButton.OnClickAsAsyncEnumerable().Subscribe(a => LoadLevelAsync(config.LevelNumber,config));
     }
 
     private void ToggleLevelWindow()
@@ -50,20 +50,21 @@ public class StartRaceSystem : GameSystemWithScreen<MenuScreen>
         screen.LevelSelectorWindow.gameObject.SetActive(!screen.LevelSelectorWindow.gameObject.activeSelf);
     }
 
-    private async void LoadLevelAsync(int levelNumber)
+    private async void LoadLevelAsync(int levelNumber,LevelConfig config)
     {
         AdsManager.Instance.ShowInterstitial("Start Race");
-        await StartLoadingLevel(levelNumber).ToCoroutine();
+        await StartLoadingLevel(levelNumber,config).ToCoroutine();
     }
 
-    private async UniTask StartLoadingLevel(int levelNumber)
+    private async UniTask StartLoadingLevel(int levelNumber,LevelConfig config)
     {
+        game.CurrentLevelConfig = config;
         _loadingScreen.LoadingImage.transform.rotation = Quaternion.Euler(Vector3.zero);
 
         _loadingScreen.BackgroundImage.DOFade(1,0.15f).SetEase(Ease.Linear)
             /*.OnComplete(async ()=> await config.ReferenceContainer.ScenesRef[levelNumber-1].LoadSceneAsync(LoadSceneMode.Additive).ToUniTask())*/;
 
-        await config.ReferenceContainer.ScenesRef[levelNumber - 1].LoadSceneAsync(LoadSceneMode.Additive).ToUniTask();
+        await this.config.ReferenceContainer.ScenesRef[levelNumber - 1].LoadSceneAsync(LoadSceneMode.Additive).ToUniTask();
 
         _loadingScreen.LoadingImage.transform.DORotate(Vector3.up * 90f, 0.3f).SetLoops(5, LoopType.Incremental).SetEase(Ease.Linear).
             OnComplete(() => _loadingScreen.BackgroundImage.DOFade(0, 0.3f));

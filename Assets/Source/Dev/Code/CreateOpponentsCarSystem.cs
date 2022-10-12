@@ -11,7 +11,7 @@ public class CreateOpponentsCarSystem : GameSystem
 
     public async override void OnInit()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < game.CurrentLevelConfig.OpponentCount; i++)
         {
             await CreateCar(i);
         }
@@ -21,5 +21,11 @@ public class CreateOpponentsCarSystem : GameSystem
     {
         var car = await _carPrefab.InstantiateAsync(null).ToUniTask();
         car.transform.position = game.Player.transform.position+Vector3.right*(4*(index+1));
+
+        if (!car.TryGetComponent(out OpponentCarComponent opponentCar)) return;
+
+        opponentCar.SetOwner(CarOwner.Opponent);
+        opponentCar.RB.isKinematic = false;
+        game.OpponentsCars.Add(opponentCar);
     }
 }
